@@ -10,4 +10,4 @@ Inventory system are very expensuve and unrealiable because of that most small o
 - Nextjs
 - Tailwindcss
 - Clerkjs for auth
-- 
+  
