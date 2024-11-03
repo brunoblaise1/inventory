@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import {Inter} from "next/font/google"
 import { cn } from "@/utils/cn";
 
-const inter = Inter({ subsets:['latin']})
+const inter = Inter({ subsets:["latin"]})
 export const metadata: Metadata = {
   title: "Inventory",
   description: "Inventory App for small stores",

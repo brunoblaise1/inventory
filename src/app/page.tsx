@@ -23,7 +23,7 @@ export default function Home() {
     </h1>
 
    
-    <p className="mt-6 text-sm max-w-prose text-zinc-400">Introducing {"Notee." } Your busines parrtner every assets managesment at your figure tips</p>
+    <p className="mt-6 text-sm max-w-prose text-zinc-400">Introducing {"Notee." } Your busines parrtner every assets managesment tool at your figure tips.</p>
 
     <div>
               <div className="mt-6">
