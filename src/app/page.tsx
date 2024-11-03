@@ -3,7 +3,6 @@ import MaxWidthWrapper from "@/utils/MaxWidth";
 import Image from "next/image";
 
 
-
 export default function Home() {
   return (
     
@@ -16,7 +15,7 @@ export default function Home() {
     
     
       <h1 className="text-4xl font-bold tracking-tight text-zinc-600 sm:text-6xl">Welcome to the mighty legendray inventory for
-      {' '}
+      {" "}
       <span className="text-orange-500">
       small business 
       </span>
@@ -24,7 +23,7 @@ export default function Home() {
     </h1>
 
    
-    <p className="mt-6 text-sm max-w-prose text-zinc-400">Introducing "Notee." Your busines parrtner every assets managesment at your figure tips</p>
+    <p className="mt-6 text-sm max-w-prose text-zinc-400">Introducing {"Notee." } Your busines parrtner every assets managesment at your figure tips</p>
 
     <div>
               <div className="mt-6">
