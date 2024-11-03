@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import {Inter} from "next/font/google"
+import { cn } from "@/utils/cn";
 
-
-
+const inter = Inter({ subsets:['latin']})
 export const metadata: Metadata = {
   title: "Inventory",
   description: "Inventory App for small stores",
@@ -16,12 +17,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <body
-        className={` antialiased`}
+        className={cn(`relative h-full  fonst-sans antialiased `, inter.className)}
       >
      
-       <Header/>
+ 
         {children}
         <Footer/> 
       </body>
