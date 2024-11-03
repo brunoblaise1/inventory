@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, {  ReactNode } from 'react'
 import { cn } from './cn'
 
 const MaxWidthWrapper = ({
