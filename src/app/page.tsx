@@ -16,7 +16,7 @@ export default function Home() {
     
     
       <h1 className="text-4xl font-bold tracking-tight text-zinc-600 sm:text-6xl">Welcome to the mighty legendray inventory for
-      {' '}
+<br />
       <span className="text-orange-500">
       small business 
       </span>
