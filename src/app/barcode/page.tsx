@@ -1,12 +1,10 @@
 
 "use client"
-import React, { FC, useState } from 'react'
+import React, { FC} from 'react'
 import { QrReader } from 'react-qr-reader';
 
 const Bar:FC =() => {
  
-    const [data, setData] = useState('No result');
-setData("")
 
   return (
     <div>
@@ -16,7 +14,7 @@ setData("")
   
       constraints={{ facingMode: "environment" }}
       />
-      <p>{data}</p>
+      <p>No result</p>
     </div>
   )
 }
