@@ -1,7 +1,7 @@
 
 "use client"
-import React, { FC, useRef, useState } from 'react'
-import { QrReader, QrReaderProps } from 'react-qr-reader';
+import React, { FC, useState } from 'react'
+import { QrReader } from 'react-qr-reader';
 
 const Bar:FC =() => {
  
@@ -19,8 +19,8 @@ const Bar:FC =() => {
 
         if (!!error) {
           console.info(error);
-        }
-      }}
+        }  
+      }}    
   
       constraints={{ facingMode: "environment" }}
       />
