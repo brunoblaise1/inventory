@@ -6,7 +6,7 @@ import { QrReader } from 'react-qr-reader';
 const Bar:FC =() => {
  
     const [data, setData] = useState('No result');
-
+setData("")
 
   return (
     <div>
