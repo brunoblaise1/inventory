@@ -1,13 +1,12 @@
-# inventory App
+# Inventory App
 
-# Introduction
+## Introduction
 
-Inventory system are very expensuve and unrealiable because of that most small owners resorted to use old paper and pen method for them to be to keep track thier inventory which is time consuming introducing "Notee", which is here to solve problems that small stores and companies face in their everyday to day life.
+Inventory systems are very expensive and unreliable, so most small owners resorted to the old paper and pen method to keep track of their inventory, which is time-consuming. Introducing "Notee" is here to solve problems that small stores and companies face in their daily lives.
 
-# Tech STack
+## Tech STack
 
-- Barcode web api by mozarilla
-- Nextjs
-- Tailwindcss
-- Clerkjs for auth
-  
+- Barcode web API by mozarilla
+- [NextJS](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Clerk](https://clerk.com/) for authentication
