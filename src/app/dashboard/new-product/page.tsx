@@ -1,5 +1,6 @@
+// eslint-disable-file no-use-before-define 
 "use client"
-//eslint-disable-line
+
 import MaxWidthWrapper from '@/utils/MaxWidth'
 import { FC, useState } from 'react'
 import BarcodeScannerComponent from "react-qr-barcode-scanner";

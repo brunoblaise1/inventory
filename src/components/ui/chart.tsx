@@ -1,5 +1,7 @@
+
+// eslint-disable-file no-use-before-define 
 "use client"
-//eslint-disable-line
+
 import * as React from "react"
 import * as RechartsPrimitive from "recharts"
 
