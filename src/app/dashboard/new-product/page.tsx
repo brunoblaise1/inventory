@@ -96,7 +96,7 @@ export const Generate =()=>{
       if(canvas){
         const pngurl = canvas.toDataURL("image/png")
         .replace("image/png", "image/octet-stream")
-        let downloadLink = document.createElement("a");
+        const downloadLink = document.createElement("a");
         downloadLink.href= pngurl
         downloadLink.download = `${code}.png`
         document.body.appendChild(downloadLink)

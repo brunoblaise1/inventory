@@ -3,7 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import {Inter} from "next/font/google"
 import { cn } from "@/utils/cn";
-import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { ClerkProvider} from "@clerk/nextjs";
 const inter = Inter({ subsets:["latin"]})
 export const metadata: Metadata = {
   title: "Inventory",

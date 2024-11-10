@@ -7,12 +7,9 @@ import {
     MenubarItem,
     MenubarMenu,
     MenubarSeparator,
-    MenubarShortcut,
     MenubarTrigger,
   } from "@/components/ui/menubar"
-  
 
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
   
 const page: FC =()=> {
