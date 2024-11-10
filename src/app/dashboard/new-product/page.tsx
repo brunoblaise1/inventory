@@ -22,14 +22,58 @@ import  Barcode from 'react-barcode';
 function page() {
   const [data, setData] = useState<string | null>(null);
 
+  const [code, setCode] = useState<string>("")
+  const downloadCode = ()=> {
+    const canvas:any = document.getElementById("Codenew111")
 
+    if(canvas){
+      const pngurl = canvas.toDataURL("image/png")
+      .replace("image/png", "image/octet-stream")
+      const downloadLink = document.createElement("a");
+      downloadLink.href= pngurl
+      downloadLink.download = `${code}.png`
+      document.body.appendChild(downloadLink)
+      downloadLink.click()
+      document.body.removeChild(downloadLink)
+    }
+  }
 
   return (
     <MaxWidthWrapper>
         <div>
         <Sells/>
         </div>
-       <Generate />
+  
+    <Drawer>
+   
+    <DrawerTrigger>  <div className='p-2'>
+              <Button>Create new code</Button>
+              </div></DrawerTrigger>
+    <DrawerContent>
+      <DrawerHeader>
+        <DrawerTitle>Create new code</DrawerTitle>
+        <DrawerDescription>Enter a unique code for your new product
+        <Barcode  value={code} id={"Codenew111"}/>
+        </DrawerDescription>
+      </DrawerHeader>  
+<>
+<form className='grid px-2 items-start gap-4'>
+  <div className='grid gap-2'>
+  <Label htmlFor='codenew'>Product code</Label>
+  <Input id='codenew' value={code} onChange={(e)=> {
+    setCode(e.target.value)
+  }}/>
+  </div>                                                                   
+</form>
+</>
+    <DrawerFooter>
+    <Button onClick={()=> downloadCode()}>Download</Button>
+      <DrawerClose>
+        <Button variant="outline">Cancel</Button>
+      </DrawerClose>
+    </DrawerFooter>
+  </DrawerContent>
+</Drawer>
         <Drawer>
   <DrawerTrigger>  <div className='p-2'>
             <Button>Create Product</Button>
@@ -88,55 +132,6 @@ function page() {
    </MaxWidthWrapper>
   )
 }
-export const Generate =()=>{
-    const [code, setCode] = useState<string>("")
-    const downloadCode = ()=> {
-      const canvas:any = document.getElementById("Codenew111")
-  
-      if(canvas){
-        const pngurl = canvas.toDataURL("image/png")
-        .replace("image/png", "image/octet-stream")
-        const downloadLink = document.createElement("a");
-        downloadLink.href= pngurl
-        downloadLink.download = `${code}.png`
-        document.body.appendChild(downloadLink)
-        downloadLink.click()
-        document.body.removeChild(downloadLink)
-      }
-    }
-  return(
-    <Drawer>
-   
-    <DrawerTrigger>  <div className='p-2'>
-              <Button>Create new code</Button>
-              </div></DrawerTrigger>
-    <DrawerContent>
-      <DrawerHeader>
-        <DrawerTitle>Create new code</DrawerTitle>
-        <DrawerDescription>Enter a unique code for your new product
-        <Barcode  value={code} id={"Codenew111"}/>
-        </DrawerDescription>
-      </DrawerHeader>  
-<>
-<form className='grid px-2 items-start gap-4'>
-  <div className='grid gap-2'>
-  <Label htmlFor='codenew'>Product code</Label>
-  <Input id='codenew' value={code} onChange={(e)=> {
-    setCode(e.target.value)
-  }}/>
-  </div>                                                                   
-</form>
-</>
-    <DrawerFooter>
-    <Button onClick={()=> downloadCode()}>Download</Button>
-      <DrawerClose>
-        <Button variant="outline">Cancel</Button>
-      </DrawerClose>
-    </DrawerFooter>
-  </DrawerContent>
-</Drawer>
-  )
 
-}
 
 export default page
