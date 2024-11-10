@@ -1,7 +1,7 @@
 "use client"
-
+//eslint-disable-line
 import MaxWidthWrapper from '@/utils/MaxWidth'
-import React, { useState } from 'react'
+import { FC, useState } from 'react'
 import BarcodeScannerComponent from "react-qr-barcode-scanner";
 
 import { Sells } from '../(charts)/sells'
@@ -19,7 +19,7 @@ import {
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import  Barcode from 'react-barcode';
-function page() {
+const page: FC=()=> {
   const [data, setData] = useState<string | null>(null);
 
   const [code, setCode] = useState<string>("")
