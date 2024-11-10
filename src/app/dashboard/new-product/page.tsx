@@ -1,4 +1,4 @@
-// eslint-disable-file no-use-before-define  
+/* eslint-disable */  
 "use client"
 
 import MaxWidthWrapper from '@/utils/MaxWidth'

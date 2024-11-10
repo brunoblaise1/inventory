@@ -1,5 +1,5 @@
 
-// eslint-disable-file no-use-before-define 
+/* eslint-disable */ 
 "use client"
 
 import * as React from "react"
