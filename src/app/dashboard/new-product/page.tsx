@@ -111,8 +111,8 @@ const page: FC=()=> {
   ): (
     <>
     <BarcodeScannerComponent
-    width={100}
-    height={100}
+    width={500}
+    height={500}
     onUpdate={(err, result) => {
       if (result) setData(result.getText());
       else setData(null)
