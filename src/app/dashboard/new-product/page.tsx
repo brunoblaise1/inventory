@@ -1,8 +1,8 @@
-// eslint-disable-file no-use-before-define 
+// eslint-disable-file no-use-before-define  
 "use client"
 
 import MaxWidthWrapper from '@/utils/MaxWidth'
-import { FC, useState } from 'react'
+
 import BarcodeScannerComponent from "react-qr-barcode-scanner";
 
 import { Sells } from '../(charts)/sells'
@@ -20,6 +20,7 @@ import {
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import  Barcode from 'react-barcode';
+import { FC, useState } from 'react';
 const page: FC=()=> {
   const [data, setData] = useState<string | null>(null);
 
