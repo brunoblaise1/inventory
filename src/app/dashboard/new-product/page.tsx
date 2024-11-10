@@ -54,7 +54,10 @@ const page: FC=()=> {
       <DrawerHeader>
         <DrawerTitle>Create new code</DrawerTitle>
         <DrawerDescription>Enter a unique code for your new product
-        <Barcode  value={code} id={"Codenew111"}/>
+          <div id={"Codenew111"}>
+          <Barcode  value={code} />
+          </div>
+        
         </DrawerDescription>
       </DrawerHeader>  
 <>
