@@ -4,7 +4,7 @@ import React, { FC } from "react"
 const Footer:FC =()=> {
   return (
     <MaxWidthWrapper >
-        <div className="flex flex-col items-center justify-center bg-orange-300/5 h-14 border-t w-full">
+        <div className="flex flex-col items-center justify-center h-14 border-t w-full">
   
         <ul className="text-sm flex flex-row items-center justify-center x-row gap-2 ">
         <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="10" height="10" viewBox="0 0 32 32">
