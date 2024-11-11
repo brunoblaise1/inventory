@@ -5,7 +5,7 @@ import MaxWidthWrapper from '@/utils/MaxWidth'
 
 import BarcodeScannerComponent from "react-qr-barcode-scanner";
 
-import { Sells } from '../(charts)/sells'
+import { Purchase } from '../(charts)/sells'
 import { Button } from '@/components/ui/button'
 import {
   Drawer,
@@ -23,8 +23,10 @@ import  Barcode from 'react-barcode';
 import { FC, useState } from 'react';
 const page: FC=()=> {
   const [data, setData] = useState<string | null>(null);
-
+  const [pname, setProduct] = useState<string>('')
+  const [price, setPrice] = useState<string>('')
   const [code, setCode] = useState<string>("")
+  const[quantity, setQuantity] = useState<string>('')
   const downloadCode = ()=> {
     const canvas:any = document.getElementById("Codenew111")?.innerHTML
 
@@ -47,12 +49,10 @@ const page: FC=()=> {
   printAble.print()
 
   }
-
-
   return (
-    <MaxWidthWrapper>
-        <div>
-        <Sells/>
+    <MaxWidthWrapper >
+        <div >
+        <Purchase/>
         </div>
   
     <Drawer>
@@ -111,17 +111,27 @@ const page: FC=()=> {
      </div>
      <div className='grid gap-2'>
       <Label htmlFor='name'>Product Name</Label>
-      <Input id='name' value={data} />
+      <Input id='name' value={pname}  onChange={(e)=>{
+        setProduct(e.target.value)
+      }}/>
      </div>
      <div className='grid gap-2'>
-      <Label htmlFor='prize'>Product Prize</Label>
-      <Input id='prize'  value={data} />
+      <Label htmlFor='price'>Product Price</Label>
+      <Input id='price'  value={price}  onChange={(e)=>{
+        setPrice(e.target.value)
+      }} />
      </div> 
+     <div>
+      <Label htmlFor='quantity'>Quantity</Label>
+      <Input value={quantity} placeholder='100 piece' id='quantity' onChange={(e)=>{
+        setQuantity(e.target.value)
+      }}/>
+     </div>
 
   
     </form>
     <DrawerFooter>
-      <Button>Submit</Button>
+      <Button>Create a new product</Button>
       <DrawerClose>
         <Button variant="outline">Cancel</Button>
       </DrawerClose>

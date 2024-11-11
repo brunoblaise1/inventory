@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: "Inventory",
   description: "Inventory App for small stores",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +21,6 @@ export default function RootLayout({
         className={cn(`relative h-full  fonst-sans antialiased `, inter.className)}
       >
         {children}
-      
         <Footer/> 
       </body>
     </html>
