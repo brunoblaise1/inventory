@@ -16,7 +16,7 @@ const page: FC =()=> {
   return (
     <MaxWidthWrapper>
 
-    <div className='p-2 m-2 flex flex-col gap-4'>
+    <div className='p-2 m-2 flex flex-col gap-4 md:flex-row md:justify-between'>
     <Sells/>
     <Purchase/>
     </div>

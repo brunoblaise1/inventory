@@ -24,7 +24,6 @@ import { Button } from '@/components/ui/button'
 const page= ()=> {
   return (
     <MaxWidthWrapper>
-
 <div>
 <Table>
   <TableCaption>A list of your recent invoices.</TableCaption>

@@ -26,19 +26,28 @@ const page: FC=()=> {
 
   const [code, setCode] = useState<string>("")
   const downloadCode = ()=> {
-    const canvas:any = document.getElementById("Codenew111")
+    const canvas:any = document.getElementById("Codenew111")?.innerHTML
 
-    if(canvas){
-      const pngurl = canvas.toDataURL("image/png")
-      .replace("image/png", "image/octet-stream")
-      const downloadLink = document.createElement("a");
-      downloadLink.href= pngurl
-      downloadLink.download = `${code}.png`
-      document.body.appendChild(downloadLink)
-      downloadLink.click()
-      document.body.removeChild(downloadLink)
-    }
+  const printAble: any = window.open("", "", "height=100, width=100")
+  printAble.document.open();
+  printAble.document.write(`
+   <html>
+   <head>
+   <title> Barcode ${code}</title>
+   </head>
+   <body>
+   <h1>Generate barcode:<h1/>
+   ${canvas}
+   </body>
+   </html>
+   `)
+
+
+  printAble.document.close()
+  printAble.print()
+
   }
+
 
   return (
     <MaxWidthWrapper>
@@ -92,6 +101,9 @@ const page: FC=()=> {
   
 {
   data ? (
+    <>
+    
+  
     <form className='px-2 grid items-star gap-4'>
      <div className='grid gap-2'>
       <Label htmlFor='code'>Product code</Label>
@@ -108,6 +120,14 @@ const page: FC=()=> {
 
   
     </form>
+    <DrawerFooter>
+      <Button>Submit</Button>
+      <DrawerClose>
+        <Button variant="outline">Cancel</Button>
+      </DrawerClose>
+    </DrawerFooter>
+    </>
+    
   ): (
     <>
     <BarcodeScannerComponent
@@ -116,7 +136,7 @@ const page: FC=()=> {
     onUpdate={(err, result) => {
       if (result) setData(result.getText());
       else setData(null)
-       
+      
     }}
   />
 <DrawerDescription className='p-2 m-2'>Please! scan the code you see on your device</DrawerDescription>
@@ -124,12 +144,7 @@ const page: FC=()=> {
   )
 }
     </>
-    <DrawerFooter>
-      <Button>Submit</Button>
-      <DrawerClose>
-        <Button variant="outline">Cancel</Button>
-      </DrawerClose>
-    </DrawerFooter>
+  
   </DrawerContent>
 </Drawer>
 
