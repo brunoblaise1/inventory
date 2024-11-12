@@ -98,7 +98,6 @@ const page= ()=> {
      </DrawerClose>
    </DrawerFooter>
    </>
-
     ):(
       <BarcodeScannerComponent
       width={500}
