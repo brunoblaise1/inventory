@@ -40,18 +40,14 @@ const page: FC=()=> {
    </body>
    </html>
    `)
-
-
   printAble.document.close()
   printAble.print()
-
   }
   return (
     <MaxWidthWrapper >
         <div >
         <Purchase/>
         </div>
-  
     <Drawer>
     <DrawerTrigger>  <div className='p-2'>
               <Button>Create new code</Button>
@@ -94,7 +90,6 @@ const page: FC=()=> {
       <DrawerDescription>By scanning the qr code or the barcode you will be able to create a new product or add product in your stock</DrawerDescription>
     </DrawerHeader>
     <>
-  
 {
   data ? (
     <> 
