@@ -2,9 +2,7 @@
 "use client"
 
 import MaxWidthWrapper from '@/utils/MaxWidth'
-
 import BarcodeScannerComponent from "react-qr-barcode-scanner";
-
 import { Purchase } from '../(charts)/sells'
 import { Button } from '@/components/ui/button'
 import {
@@ -28,8 +26,7 @@ const page: FC=()=> {
   const [code, setCode] = useState<string>("")
   const[quantity, setQuantity] = useState<string>('')
   const downloadCode = ()=> {
-    const canvas:any = document.getElementById("Codenew111")?.innerHTML
-
+  const canvas:any = document.getElementById("Codenew111")?.innerHTML
   const printAble: any = window.open("", "", "height=100, width=100")
   printAble.document.open();
   printAble.document.write(`
@@ -56,7 +53,6 @@ const page: FC=()=> {
         </div>
   
     <Drawer>
-   
     <DrawerTrigger>  <div className='p-2'>
               <Button>Create new code</Button>
               </div></DrawerTrigger>
@@ -101,9 +97,7 @@ const page: FC=()=> {
   
 {
   data ? (
-    <>
-    
-  
+    <> 
     <form className='px-2 grid items-star gap-4'>
      <div className='grid gap-2'>
       <Label htmlFor='code'>Product code</Label>
@@ -127,8 +121,6 @@ const page: FC=()=> {
         setQuantity(e.target.value)
       }}/>
      </div>
-
-  
     </form>
     <DrawerFooter>
       <Button>Create a new product</Button>
@@ -137,7 +129,6 @@ const page: FC=()=> {
       </DrawerClose>
     </DrawerFooter>
     </>
-    
   ): (
     <>
     <BarcodeScannerComponent
@@ -157,9 +148,7 @@ const page: FC=()=> {
   
   </DrawerContent>
 </Drawer>
-
-       
-   </MaxWidthWrapper>
+</MaxWidthWrapper>
   )
 }
 

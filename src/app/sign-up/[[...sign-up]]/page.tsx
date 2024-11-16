@@ -1,8 +1,6 @@
 import MaxWidthWrapper from "@/utils/MaxWidth";
 import { SignUp } from "@clerk/nextjs";
 
-
-
 export default function Page (){
     return(
         <MaxWidthWrapper>

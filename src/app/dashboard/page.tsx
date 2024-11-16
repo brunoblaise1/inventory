@@ -13,7 +13,6 @@ import { Tabs,  TabsList, TabsTrigger } from "@/components/ui/tabs"
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 const page: FC =()=> {
-
   return (
     <MaxWidthWrapper>
        <div className='p-2 m-2'>

@@ -34,7 +34,6 @@ import { useState } from "react"
 //   { month: "May", desktop: 209, mobile: 130 },
 //   { month: "June", desktop: 214, mobile: 140 },
 // ]
-
   const chartData = [
     { date: "2024-04-01", iphone: 222, tablet: 150, laptop: 33 },
     { date: "2024-04-02", iphone: 222, tablet: 150, laptop: 33 },
@@ -84,7 +83,6 @@ import { useState } from "react"
     { date: "2024-04-12", iphone: 22, tablet: 150, laptop: 33 },
   ]
   
-
 const chartConfig = {
   desktop: {
     label: "Desktop",
@@ -147,9 +145,6 @@ const chartConfig = {
 //     </Card>
 //   )
 // }
-
-
-
 
 export function Purchase() {
   const [timeRange, setTimeRange] = useState("90d")
