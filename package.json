@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.3.0",
+    "@next/bundle-analyzer": "^15.0.3",
     "@novu/echo": "^0.24.3-alpha.4",
     "@radix-ui/react-dialog": "^1.1.2",
     "@radix-ui/react-label": "^2.1.0",
@@ -27,6 +28,7 @@
     "init": "^0.1.2",
     "lucide-react": "^0.456.0",
     "next": "15.0.2",
+    "next-pwa": "^5.6.0",
     "react": "19.0.0-rc-02c0e824-20241028",
     "react-barcode": "^1.5.3",
     "react-dom": "19.0.0-rc-02c0e824-20241028",
