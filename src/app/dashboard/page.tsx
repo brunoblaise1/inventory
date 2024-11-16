@@ -9,12 +9,9 @@ import {
     MenubarSeparator,
     MenubarTrigger,
   } from "@/components/ui/menubar"
-
 import { Tabs,  TabsList, TabsTrigger } from "@/components/ui/tabs"
-
 import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-  
 const page: FC =()=> {
   return (
     <MaxWidthWrapper>
@@ -25,9 +22,7 @@ const page: FC =()=> {
     <TabsTrigger value="account">Overview</TabsTrigger>
     <TabsTrigger value="password">Reports</TabsTrigger>
   </TabsList>
-  
 </Tabs>
-
 <div  className='flex flex-col p-2 gap-4 md:flex-row'>
 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
