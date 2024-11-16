@@ -16,7 +16,6 @@ const page: FC =()=> {
   return (
     <MaxWidthWrapper>
        <div className='p-2 m-2'>
-       
        <Tabs defaultValue="account" className="flex justify-end">
   <TabsList>
     <TabsTrigger value="account">Overview</TabsTrigger>
@@ -49,15 +48,11 @@ const page: FC =()=> {
                     </p>
                   </CardContent>
                 </Card>
-
-
-
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
                       Sales
-                    </CardTitle>
-                   
+                    </CardTitle>          
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">+45</div>
@@ -66,18 +61,14 @@ const page: FC =()=> {
                     </p>
                   </CardContent>
                 </Card>
-
-
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
                      Total users
-                    </CardTitle>
-                  
+                    </CardTitle>        
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold">452</div>
-                   
+                    <div className="text-2xl font-bold">452</div>         
                   </CardContent>
                 </Card>
                 <Card>
@@ -85,23 +76,19 @@ const page: FC =()=> {
                     <CardTitle className="text-sm font-medium">
                      Total Stockin
                     </CardTitle>
-                  
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">452</div>
-                   
                   </CardContent>
                 </Card>
                 <Card>
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium">
                      Total Stockout
-                    </CardTitle>
-                  
+                    </CardTitle> 
                   </CardHeader>
                   <CardContent>
                     <div className="text-2xl font-bold">452</div>
-                   
                   </CardContent>
                 </Card>
 </div>
@@ -109,7 +96,6 @@ const page: FC =()=> {
     <div className='p-2 m-2 flex flex-col gap-4 md:flex-row md:justify-between'>
     {/* <Sells/> */}
     <Purchase/>
-
     <Card className="col-span-3">
                   <CardHeader>
                     <CardTitle>Recent Sales</CardTitle>
@@ -120,7 +106,6 @@ const page: FC =()=> {
                   <CardContent>
                   <div className="space-y-8">
      <div className="flex items-center">
-     
        <div className="ml-4 space-y-1">
          <p className="text-sm font-medium leading-none">Sofia Davis</p>
          <p className="text-sm text-muted-foreground">sofia.davis@email.com</p>
@@ -130,7 +115,6 @@ const page: FC =()=> {
    </div>
                   </CardContent>
                   </Card>
-   
     </div>
 
     <div className='m-2'>
@@ -142,7 +126,6 @@ const page: FC =()=> {
         <Link href="/dashboard/new-product">
         New
         </Link>
- 
       </MenubarItem>
       <MenubarItem>
         <Link href="/dashboard/checkout">
@@ -156,20 +139,14 @@ const page: FC =()=> {
   </MenubarMenu>
   <MenubarMenu>
     <MenubarTrigger>Sells</MenubarTrigger>
-
   </MenubarMenu>
   <MenubarMenu>
     <MenubarTrigger>
      Users
     </MenubarTrigger>
   </MenubarMenu>
-
-
-             
 </Menubar>
 
-
- 
  </div>
     </MaxWidthWrapper>
   )

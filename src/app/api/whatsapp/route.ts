@@ -6,7 +6,7 @@ const accountSid = process.env.TWILIO_ACCOUNT_SID;
 const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
-export  async function POST(req: NextRequest, res:NextResponse){
+export  async function POST(){
  try {
     const data = await client.messages.create({
         from: 'whatsapp:+14155238886',
@@ -15,7 +15,7 @@ export  async function POST(req: NextRequest, res:NextResponse){
         to: 'whatsapp:+250794234678'
     })
 
-    return NextResponse.json({ success: true})
+    return NextResponse.json({ data})
  } catch (error) {
     return NextResponse.json({error}, {status: 500})
  }
