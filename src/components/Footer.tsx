@@ -15,6 +15,4 @@ const Footer:FC =()=> {
     </MaxWidthWrapper>
   )
 }
-
-
 export default Footer;

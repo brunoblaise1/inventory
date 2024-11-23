@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import {Inter} from "next/font/google"
-import { cn } from "@/utils/cn";
+
 import { ClerkProvider} from "@clerk/nextjs";
+import { cn } from "@/lib/utils";
+
 const inter = Inter({ subsets:["latin"]})
 export const metadata: Metadata = {
   title: "Inventory",
@@ -26,9 +28,11 @@ export default function RootLayout({
 <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={cn(`relative h-full  fonst-sans antialiased `, inter.className)}
+        className={cn(`h-full antialiased overflow-x-hidden` , inter.className)}
       >
+        <main>
         {children}
+        </main>
         <Footer/> 
       </body>
     </html>

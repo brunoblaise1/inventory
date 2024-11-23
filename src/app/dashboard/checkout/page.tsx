@@ -116,5 +116,4 @@ const page= ()=> {
     </MaxWidthWrapper>
   )
 }
-
 export default page

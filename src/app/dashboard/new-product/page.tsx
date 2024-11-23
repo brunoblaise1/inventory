@@ -3,7 +3,7 @@
 
 import MaxWidthWrapper from '@/utils/MaxWidth'
 import BarcodeScannerComponent from "react-qr-barcode-scanner";
-import { Purchase } from '../(charts)/sells'
+
 import { Button } from '@/components/ui/button'
 import {
   Drawer,
@@ -45,9 +45,7 @@ const page: FC=()=> {
   }
   return (
     <MaxWidthWrapper >
-        <div >
-        <Purchase/>
-        </div>
+     
     <Drawer>
     <DrawerTrigger>  <div className='p-2'>
               <Button>Create new code</Button>
@@ -140,12 +138,9 @@ const page: FC=()=> {
   )
 }
     </>
-  
   </DrawerContent>
 </Drawer>
 </MaxWidthWrapper>
   )
 }
-
-
 export default page

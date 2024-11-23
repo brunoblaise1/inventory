@@ -7,7 +7,6 @@ export default function Page (){
             <div className="flex justify-center items-center p-2">
             <SignUp/>
             </div>
-             
         </MaxWidthWrapper>
     )
 }
